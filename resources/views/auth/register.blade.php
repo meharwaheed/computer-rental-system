@@ -211,6 +211,12 @@
                                 </span>
                             @enderror
                         </div>
+                        <div class="form-check ml-5 mt-3">
+                            <input class="form-check-input" type="checkbox" name="is_student" value="1" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Are You Student
+                            </label>
+                          </div>
 
 
 

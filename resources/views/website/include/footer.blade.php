@@ -19,7 +19,7 @@
                         <li>
                             @if (auth()->check())
                                 <a
-                                    href="@if (auth()->user()->is_admin == 1) {{ route('supper_admin_dashboard') }}
+                                    href="@if (auth()->user()->role == 'Customer') {{ route('supper_admin_dashboard') }}
                   
                                   @else
                                   {{ route('dashboard') }} @endif">Dashboard</a>
