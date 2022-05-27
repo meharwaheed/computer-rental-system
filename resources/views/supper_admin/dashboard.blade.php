@@ -19,7 +19,7 @@ use Carbon\Carbon;
                 <div class="widget-body">
                     <div class="row">
                         <div class="col-xl-12 d-flex flex-column justify-content-center align-items-center">
-                            <div class="counter">Admin Dashboard</div>
+                            <div class="counter">Admin/Staff Dashboard</div>
                             <br>
                             <div class="total-views">
 
@@ -32,11 +32,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-user"></i>
-                                            </div>
+                                         
                                             <div class="media-body align-self-center">
-                                                <div class="title text-facebook"> Customers</div>
+                                                <div class="title text-facebook">Total Customers</div>
                                                 <div class="number">{{$total_customers}}</div>
                                             </div>
                                         </div>
@@ -49,11 +47,8 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-user"></i>
-                                            </div>
                                             <div class="media-body align-self-center">
-                                                <div class="title text-facebook"> UCR Staff</div>
+                                                <div class="title text-facebook">Total UCR Staff</div>
                                                 <div class="number">{{$total_staff}}</div>
                                             </div>
                                         </div>
@@ -66,11 +61,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-user"></i>
-                                            </div>
+                                         
                                             <div class="media-body align-self-center">
-                                                <div class="title text-twitter">Web Managers</div>
+                                                <div class="title text-facebook">Total Web Managers</div>
                                                 <div class="number">{{$total_managers}}</div>
                                             </div>
                                         </div>
@@ -84,11 +77,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-user"></i>
-                                            </div>
+                                            
                                             <div class="media-body align-self-center">
-                                                <div class="title text-twitter">Total Users</div>
+                                                <div class="title text-facebook">All Users</div>
                                                 <div class="number">{{$total_users}}</div>
                                             </div>
                                         </div>
@@ -101,11 +92,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-star"></i>
-                                            </div>
+                                           
                                             <div class="media-body align-self-center">
-                                                <div class="title text-linkedin">Devices on Rent</div>
+                                                <div class="title text-facebook">All Computers on Rent</div>
                                                 <div class="number">{{$rented_devices}}</div>
                                             </div>
                                         </div>
@@ -118,11 +107,8 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-star"></i>
-                                            </div>
                                             <div class="media-body align-self-center">
-                                                <div class="title text-linkedin">Available Devices</div>
+                                                <div class="title text-facebook">Available Computers</div>
                                                 <div class="number">{{$available_devices}}</div>
                                             </div>
                                         </div>
@@ -135,11 +121,8 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-star"></i>
-                                            </div>
                                             <div class="media-body align-self-center">
-                                                <div class="title text-linkedin">Total Devices</div>
+                                                <div class="title text-facebook">Total Computers</div>
                                                 <div class="number">{{$total_devices}}</div>
                                             </div>
                                         </div>

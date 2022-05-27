@@ -51,11 +51,11 @@
         <div class="row">
             <div class="page-header">
                 <div class="d-flex align-items-center">
-                    <h2 class="page-header-title">Services</h2>
+                    <h2 class="page-header-title">Computers</h2>
                     <div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('supper_admin_dashboard')}}"><i class="ti ti-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">All Services</a></li>
+                            <li class="breadcrumb-item"><a href="#">All Computers</a></li>
                             <!-- <li class="breadcrumb-item active">Pending</li> -->
                         </ul>
                     </div>
@@ -165,7 +165,7 @@
                             swal({
                                 title: 'Congrats!',
                                 icon: "success",
-                                text: "Service has been deleted",
+                                text: "Computer has been deleted",
                                 type: 'confirm',
                                 confirmButtonClass: "btn btn-success",
                                 buttonsStyling: true

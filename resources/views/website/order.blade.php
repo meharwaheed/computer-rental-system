@@ -95,7 +95,12 @@
                                     </ul>
 
                                     <div class="text-center mt-4">
+                                        @if ($service->is_rented == 1)
+                                        <button type="button" disabled class="btn btn-danger rounded-pill px-5 text-light">Already reserved</button>
+                                        @else
                                         <button type="submit" class="btn btn-warning rounded-pill px-5 text-light">Book Now</button>
+
+                                        @endif
                                     </div>
                                 </div>
 
@@ -108,7 +113,7 @@
                                 <span class="rent_out">Reserved</span>
                             @endif
                             <img width="100%" class="rounded"
-                                src="{{ asset('website/assets/images/') }}/{{ $service->image }}">
+                                src="{{asset(env('PUBLIC_URL').'public/images/service_images/')}}/{{ $service->image}}">
                         </div>
                     </div>
                 </div>

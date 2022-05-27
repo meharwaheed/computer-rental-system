@@ -53,8 +53,13 @@
                                 <li class="list-group-item"><b class="pr-5">Insurance Amount:
                                     </b>${{ $service->insurance_amount }}</li>
                                 <div class="text-center">
+                                    @if ($service->is_rented == 1)
+                                    <button type="button" disabled class="mt-5 btn btn-danger rounded-pill px-5 text-light">Already reserved</button>
+                                    @else
                                     <a href="{{ route('checkout_page', [$service->id]) }}"
                                         class="cart-btn px-4 mt-3">Rent It Now</a>
+                                    @endif
+    
 
                                 </div>
                             </ul>
@@ -67,7 +72,7 @@
                                 <span class="rent_out">Reserved</span>
                             @endif
                             <img width="100%" height="500px" class="rounded"
-                                src="{{ asset('website/assets/images/') }}/{{ $service->image }}">
+                                src="{{asset(env('PUBLIC_URL').'public/images/service_images/')}}/{{ $service->image}}">
                         </div>
 
                     </div>

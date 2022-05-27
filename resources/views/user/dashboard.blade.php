@@ -32,11 +32,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-star"></i>
-                                            </div>
+                                        
                                             <div class="media-body align-self-center">
-                                                <div class="title text-linkedin">My Rented Devices</div>
+                                                <div class="title text-linkedin">Devices Taken on Rent</div>
                                                 <div class="number">{{$rented_devices}}</div>
                                             </div>
                                         </div>
@@ -49,11 +47,9 @@ use Carbon\Carbon;
                                 <div class="widget widget-12 has-shadow">
                                     <div class="widget-body">
                                         <div class="media">
-                                            <div class="align-self-center ml-5 mr-5">
-                                                <i class="la la-star"></i>
-                                            </div>
+                                            
                                             <div class="media-body align-self-center">
-                                                <div class="title text-linkedin">My Account Balance</div>
+                                                <div class="title text-linkedin">Available Balance</div>
                                                 <div class="number text-bold">${{auth()->user()->total_money}}</div>
                                             </div>
                                         </div>

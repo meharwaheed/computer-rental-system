@@ -40,7 +40,7 @@
                         </div>
                         <div class="content">
                             <h3>Laptop Services</h3>
-                            <p>start 5$ Per/Hour</p>
+                            <p>start $5 Per/Hour</p>
                         </div>
                     </div>
                 </div>
@@ -61,8 +61,8 @@
                             <i class="fas fa-sync"></i>
                         </div>
                         <div class="content">
-                            <h3>Refund</h3>
-                            <p>Get refund within 3 days!</p>
+                            <h3>Max Hours</h3>
+                            <p>You can take device on rent for max 5 hours</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <div class="single-product-item">
                             <div class="product-image">
                                 <a href="single-product.html"><img width="200px" height="200px"
-                                        src="{{ asset('website/assets/images/') }}/{{ $computer->image }}" alt=""></a>
+                                        src="{{asset(env('PUBLIC_URL').'public/images/service_images/')}}/{{ $computer->image}}" alt=""></a>
                             </div>
                             <h3>{{ $computer->title }}</h3>
                             <p class="product-price"><span>Per Hour/Price</span> {{ $computer->per_hour_rate }}$ </p>

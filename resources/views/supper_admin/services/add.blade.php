@@ -101,21 +101,21 @@
         }
     </style>
     <?php
-    $cats = ['Computer', 'Keyboard', 'Mouse', 'Other'];    ?>
+    $cats = ['Computer'];    ?>
     <div class="container-fluid">
         <!-- Begin Page Header-->
         <div class="row">
             <div class="page-header">
                 <div class="d-flex align-items-center">
                     <h2 class="page-header-title">@if(isset($service->id) and $service->id >0) Edit @else Add New @endif
-                        Service</h2>
+                        Computer</h2>
                     <div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('supper_admin_dashboard')}}"><i
                                             class="ti ti-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="{{route('supper_admin_dashboard')}}">Dashboard</a></li>
                             <li class="breadcrumb-item active">@if(isset($service->id) and $service->id >0) Edit @else
-                                    Add New @endif Service
+                                    Add New @endif Computer
                             </li>
                         </ul>
                     </div>
@@ -143,10 +143,10 @@
                                         @csrf
 
                                         <div class="form-group row d-flex align-items-center mb-5">
-                                <label class="col-lg-4 form-control-label d-flex justify-content-lg-end">Select Image</label>
+                                <label class="col-lg-4 form-control-label d-flex justify-content-lg-end">Choose Computer Image</label>
                                 <div class="col-lg-5">
                                     <div class="input-group">
-                                        <div class="avatar-upload">
+                                        <div class="avatar-upload1">
                                             <div class="avatar-edit">
                                                 <input type="file" img="1" class="form-control" onchange="changeAvatar(this)" name="image" id="imageUpload1" accept=".png, .jpg, .jpeg">
                                                 <label for="imageUpload1"></label>
@@ -188,18 +188,18 @@
                                                        value="{{$service->title}}" required="">
                                             </div>
                                             <div class="col-lg-6">
-                                                <label>Brand</label>
+                                                <label>Computer Brand </label>
                                                 <input name="brand" type="text" class="form-control"
                                                        value="{{$service->brand}}" required="">
                                             </div>
                                             <div class="col-lg-6">
-                                                <label>Per Hour Rent</label>
+                                                <label>Per Hour Rate</label>
                                                 <input name="per_hour_rate" type="number" class="form-control"
                                                        value="{{$service->per_hour_rate}}" required="">
                                             </div>
                                             <div class="col-lg-6">
 
-                                                <label>Operating System</label>
+                                                <label>Device Operating System</label>
                                                 <input name="os" type="text"
                                                        class="form-control"
                                                        value="{{$service->os}}">
@@ -213,14 +213,14 @@
                                             </div>
                                             <div class="col-lg-6">
 
-                                                <label>No of USB ports</label>
+                                                <label>Number of USB ports</label>
                                                 <input name="no_of_usb_ports" type="number"
                                                        class="form-control"
                                                        value="{{$service->no_of_usb_ports}}">
                                             </div>
                                             <div class="col-lg-6">
 
-                                                <label>No of HDMI ports</label>
+                                                <label>Number of HDMI ports</label>
                                                 <input name="no_of_hdmi_ports" type="number"
                                                        class="form-control"
                                                        value="{{$service->no_of_hdmi_ports}}">

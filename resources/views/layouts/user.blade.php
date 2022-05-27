@@ -42,16 +42,20 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/zoomimage.css') }}"/>
     <!-- CSRF Token -->
     @yield('header_styles')
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="{{ asset('public/assets/css/datatables/datatables.min.css') }}">
     <!--[if lt IE 9]> -->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    {{-- <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> --}}
+    {{-- <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> --}}
     <style type="text/css">
         .full-page-content {
             min-height: 82vh;
         }
+        .default-sidebar {
+    background: black!important;
+}
     </style>
     <style type="text/css">
         .page-content.d-flex.align-items-stretch .content-inner .container-fluid {
@@ -108,6 +112,9 @@ input[type=number] {
         color: #ff5722;
     }
     .blockUI{border: none!important;}
+    .default-sidebar {
+        background: black!important
+    }
  </style>
 
  <!-- preloader -->
@@ -117,7 +124,6 @@ input[type=number] {
 <!-- Begin Preloader -->
 <div id="preloader">
     <div class="canvas">
-        <img style="width: 225px;" src="{{ asset(env('PUBLIC_URL'). 'website/assets/images/logo.png')}}" alt="logo" class="loader-logo">
         <div class="spinner"></div>
     </div>
 </div>

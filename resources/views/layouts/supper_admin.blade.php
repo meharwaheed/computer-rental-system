@@ -105,6 +105,9 @@ input[type=number] {
         color: #ff5722;
     }
     .blockUI{border: none!important;}
+    .default-sidebar {
+        background: black!important
+    }
  </style>
 
  <!-- preloader -->
