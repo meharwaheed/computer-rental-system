@@ -1,232 +1,218 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
+<html>
+    
 <head>
-    <title>Register | UTAS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('public/webiste/assets/images/favicon.png') }}" type="image/png">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset(env('PUBLIC_URL') . 'login_assets/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset(env('PUBLIC_URL') . 'login_assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset(env('PUBLIC_URL') . 'login_assets/vendor/animate/animate.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset(env('PUBLIC_URL') . 'login_assets/vendor/css-hamburgers/hamburgers.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset(env('PUBLIC_URL') . 'login_assets/vendor/select2/select2.min.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('PUBLIC_URL') . 'login_assets/css/util.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset(env('PUBLIC_URL') . 'login_assets/css/main.css') }}">
-    <!--===============================================================================================-->
-    <style>
-        .wrap-login100 {
-            padding: 33px 130px 33px 95px;
-        }
-
-        @media (max-width: 576px) {
-            .wrap-login100 {
-                padding: 12px 15px 33px;
-            }
-        }
-
-    </style>
+	<title>{{env('APP_NAME')}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
+<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #60a3bc !important;
+		}
+		.user_card {
+			height: 558px;
+			width: 350px;
+			margin-top: 85px;
+			margin-bottom: 20px;
+			background: #f39c12;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
 
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #60a3bc;
+			padding: 10px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+		.form_container {
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			background: #c0392b !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #c0392b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #c0392b !important;
+		}
+        .brand_logo_container {
+            display: flex;
+    /* border-radius: 10px; */
+    border: 20px solid #f39e38;
+    background: #c0392b;
+    color: white;
+        }
+        .login {
+            margin: auto;
+    color: #f8f9fa;
+    font-weight: bold;
+    font-size: 24px;
+        }
+</style>
 <body>
+   
+	<div class="container h-100">
 
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <form class="account-form" id="sign_in" method="POST" action="{{ route('register') }}"
-                    style="width:100%;">
+        
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+            
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container" style="display: flex;
+                    border: 20px solid #f39e38;">
+                        <p class="login">Register</p>
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form class="account-form" id="sign_in" method="POST" action="{{ route('register') }}"
+                    >
                     @csrf
-                    <span class="login100-form-title">
-                        UTAS Register
-                    </span>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input"
-                                data-validate="Valid first name is required: Mehar">
-                                <input class="input100 @error('email') is-invalid @enderror" type="text"
-                                    name="name" placeholder="Name" required autocomplete="off"
-                                    value="{{ old('name') }}">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-name" aria-hidden="true"></i>
-                                </span>
-                            </div>
+                        <div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input required type="text" name="name" class="form-control input_user" value="" placeholder="Enter name">
                             @error('name')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input"
-                                data-validate="Valid phone is required: +92324 - 4448940">
-                                <input class="input100 @error('email') is-invalid @enderror" type="text" name="phone"
-                                    placeholder="Phone" required autocomplete="off" value="{{ old('phone') }}">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </span>
-                            </div>
+						</div>
+                        <div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-phone"></i></span>
+							</div>
+							<input required type="text" name="phone" class="form-control input_user" value="" placeholder="Enter phone">
                             @error('phone')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input"
-                                data-validate="Valid email is required: adam@gmail.com">
-                                <input class="input100 @error('email') is-invalid @enderror" type="text" name="email"
-                                    placeholder="Email" required autocomplete="off" value="{{ old('email') }}">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </span>
-                            </div>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							</div>
+							<input required type="email" name="email" class="form-control input_user" value="" placeholder="username">
                             @error('email')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input" data-validate="Password is required">
-                                <input class="input100" type="password" name="password" placeholder="Password"
-                                    required="">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-lock" aria-hidden="true"></i>
-                                </span>
-                            </div>
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-lock"></i></span>
+							</div>
+							<input type="password" required name="password" class="form-control input_pass" value="" placeholder="password">
                             @error('password')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input" data-validate="Password Confirmation is required">
-                                <input class="input100" type="password" name="password_confirmation"
-                                    placeholder="Password Confirmation" required="">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-lock" aria-hidden="true"></i>
-                                </span>
-                            </div>
+						</div>
+                        <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-lock"></i></span>
+							</div>
+							<input type="password" required name="password_confirmation" class="form-control input_pass" value="" placeholder="Password Confirmation">
                             @error('password_confirmation')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input">
-                                <select class="input100" name="city" aria-label="Default select example">
-                                    <option value="Hobart">Hobart</option>
-                                    <option value="Launceston">Launceston</option>
-                                  </select>
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                            @error('city')
-                                <span style="display: block;" class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="address"
-                                    placeholder="Address" required autocomplete="off" value="{{ old('address') }}">
-                                <span class="focus-input100"></span>
-                                <span class="symbol-input100">
-                                    <i class="fa fa-address-card" aria-hidden="true"></i>
-                                </span>
-                            </div>
+						</div>
+                        <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-map"></i></span>
+							</div>
+							<input type="text" required name="address" class="form-control input_pass" value="" placeholder="Address">
                             @error('address')
                                 <span style="display: block;" class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-check ml-5 mt-3">
-                                <input class="form-check-input" type="checkbox" name="is_student" value="1" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                  Is Student
-                                </label>
-                              </div>
-                        </div>
-                    </div>
+						</div>
+                        <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-map-marker"></i></span>
+							</div>
+                            <select name="city" class="form-control input_pass">
+                                <option value="Hobart">Hobart</option>
+                                <option value="Launceston">Launceston</option>
+                            </select>
+                            @error('address')
+                                <span style="display: block;" class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+						</div>
 
+                        
+						
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="submit"  class="btn login_btn">Register</button>
+				   </div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="{{route('login')}}" class="ml-2">Login</a>
+					</div>
+				</div>
+			</div>
+     
 
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" style="background-color: #ff5722;width: 265px;">
-                            Register
-                        </button>
-                    </div>
+		</div>
+   
 
-                    <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Already Member?
-                        </span>
-                        <a class="txt2" href="{{ url('login') }}">
-                            Login
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <!--===============================================================================================-->
-    <script src="{{ asset('public/login_assets/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('public/login_assets/vendor/bootstrap/js/popper.js') }}"></script>
-    <script src="{{ asset('public/login_assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('public/login_assets/vendor/select2/select2.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('public/login_assets/vendor/tilt/tilt.jquery.min.js') }}"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-    </script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-    </script>
-
-    <!--===============================================================================================-->
-    <script src="{{ asset('public/login_assets/js/main.js') }}"></script>
-
+	</div>
 </body>
-
 </html>
+
