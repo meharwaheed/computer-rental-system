@@ -56,7 +56,7 @@ Route::get('user/my-rented-devices', 'user\HomeController@my_rented_devices')->n
 Route::post('user/return-request', 'user\HomeController@send_return_request')->name('send_return_request');
 
 
-Route::get('/service-detail/{id?}', 'HomeController@single')->name('single');
+Route::get('/service_detail/{id?}', 'HomeController@service_detail')->name('service_detail');
 
 
 

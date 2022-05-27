@@ -21,45 +21,36 @@
 
     <!--====== Title ======-->
     <title>{{ENV('APP_NAME')}}</title>
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{asset('website/assets/images/favicon.png')}}" type="image/png">
-
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/bootstrap.min.css')}}">
     <!--====== Notification css ======-->
     <link href="{{ asset('public/assets/css/toastr.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/all.min.css')}}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{{asset('website/assets/bootstrap/css/bootstrap.min.css')}}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/owl.carousel.css')}}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/magnific-popup.css')}}">
+	<!-- animate css -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/animate.css')}}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/meanmenu.min.css')}}">
+	<!-- main style -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/main.css')}}">
+	<!-- responsive -->
+	<link rel="stylesheet" href="{{asset('website/assets/css/responsive.css')}}">
 
     <style>
         .toast {
     opacity:1!important;
 }
     </style>
-    <!--====== animate css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/animate.css')}}">
 
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/all.css')}}">
-
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/magnific-popup.css')}}">
-
-    <!--====== nice select css ======-->
-    <!-- <link rel="stylesheet" href="{{asset('website/assets/css/nice-select.css')}}"> -->
-
-    <!--====== rangeSlider css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/ion.rangeSlider.min.css')}}">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/slick.css')}}">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/default.css')}}">
-
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="{{asset('website/assets/css/style.css')}}">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -67,44 +58,30 @@
 @include('website.include.header')
 @yield('content')
 @include('website.include.footer')
-  <!--====== jquery js ======-->
-    <script src="{{asset('website/assets/js/vendor/modernizr-3.6.0.min.js')}}"></script>
-    <script src="{{asset('website/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="{{asset('website/assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('website/assets/js/popper.min.js')}}"></script>
-
-    <!--====== Slick js ======-->
-    <script src="{{asset('website/assets/js/slick.min.js')}}"></script>
-
-    <!--====== counterup js ======-->
-    <script src="{{asset('website/assets/js/jquery.counterup.min.js')}}"></script>
-
-    <!--====== nice select js ======-->
-    <!-- <script src="{{asset('website/assets/js/jquery.nice-select.min.js')}}"></script> -->
-
-    <!--====== waypoints js ======-->
-    <script src="{{asset('website/assets/js/waypoints.min.js')}}"></script>
-
-    <!--====== rangeSlider js ======-->
-    <script src="{{asset('website/assets/js/ion.rangeSlider.min.js')}}"></script>
-
-    <!--====== wow js ======-->
-    <script src="{{asset('website/assets/js/wow.min.js')}}"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="{{asset('website/assets/js/jquery.magnific-popup.min.js')}}"></script>
-
-    <!--====== Ajax Contact js ======-->
-    <script src="{{asset('website/assets/js/ajax-contact.js')}}"></script>
-
-    <!--====== Main js ======-->
-    <script src="{{asset('website/assets/js/main.js')}}"></script>
-
 
 <!--Scroll to top-->
 <script src="{{ asset('public/assets/js/toastr.min.js') }}"></script>
+
+	<!-- jquery -->
+	<script src="{{asset('website/assets/js/jquery-1.11.3.min.js')}}"></script>
+	<!-- bootstrap -->
+	<script src="{{asset('website/assets/bootstrap/js/bootstrap.min.js')}}"></script>
+	<!-- count down -->
+	<script src="{{asset('website/assets/js/jquery.countdown.js')}}"></script>
+	<!-- isotope -->
+	<script src="{{asset('website/assets/js/jquery.isotope-3.0.6.min.js')}}"></script>
+	<!-- waypoints -->
+	<script src="{{asset('website/assets/js/waypoints.js')}}"></script>
+	<!-- owl carousel -->
+	<script src="{{asset('website/assets/js/owl.carousel.min.js')}}"></script>
+	<!-- magnific popup -->
+	<script src="{{asset('website/assets/js/jquery.magnific-popup.min.js')}}"></script>
+	<!-- mean menu -->
+	<script src="{{asset('website/assets/js/jquery.meanmenu.min.js')}}"></script>
+	<!-- sticker js -->
+	<script src="{{asset('website/assets/js/sticker.js')}}"></script>
+	<!-- main js -->
+	<script src="{{asset('website/assets/js/main.js')}}"></script>
 
 <script type="text/javascript">
     toastr.options = {

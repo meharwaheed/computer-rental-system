@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         // dd(database_path('database.sqlite'));
-        $data['services'] = Product::all()->take(10);
+        $data['computers'] = Product::all()->take(6);
         return view('website.index')->with($data);
     }
     public function services()
@@ -54,7 +54,7 @@ class HomeController extends Controller
         $this->send_general_email($mail_data);
         return redirect()->back();
     }
-    public function single($id)
+    public function service_detail($id)
     {
         $data['service'] = Product::findOrFail($id);
         return view('website.service_detail')->with($data);
